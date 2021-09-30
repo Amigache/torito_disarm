@@ -32,8 +32,8 @@ SoftwareSerial softSerial(9,10);   // RX, TX
  *  - Battery, amperage and voltage (SYS_STATUS) in MAV_DATA_STREAM_EXTENDED_STATUS
  *  - Gyro info (IMU_SCALED) in MAV_DATA_STREAM_EXTRA1
  */
-const uint8_t mav_streams[] = {MAV_DATA_STREAM_POSITION};
-const uint16_t mav_rates[] = {0x02};
+const uint8_t mav_streams[] = {MAV_DATA_STREAM_ALL, MAV_DATA_STREAM_POSITION,MAV_DATA_STREAM_EXTRA3};
+const uint16_t mav_rates[] = {0x00,0x02,0x01};
 const uint8_t n_streams =  sizeof(mav_streams)/sizeof(mav_streams[0]);
 
 // Mavlink variables
